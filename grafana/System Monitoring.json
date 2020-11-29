@@ -1562,7 +1562,7 @@
           "groupBy": [
             {
               "params": [
-                "$5m"
+                "5m"
               ],
               "type": "time"
             },
