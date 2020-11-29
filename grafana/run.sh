@@ -5,8 +5,8 @@
 : "${GF_PATHS_PLUGINS:=/var/lib/grafana/plugins}"
 : "${GF_PATHS_PROVISIONING:=/etc/grafana/provisioning}"
 
-chown -R grafana:grafana "$GF_PATHS_DATA" "$GF_PATHS_LOGS"
-chown -R grafana:grafana /etc/grafana
+chown -R grafana:root "$GF_PATHS_DATA" "$GF_PATHS_LOGS"
+chown -R grafana:root /etc/grafana
 
 # Install all available plugins
 if [ "${GRAFANA_PLUGINS_ENABLED}" != "false" ]
@@ -15,7 +15,7 @@ then
   then
     GRAFANA_PLUGINS=`grafana-cli plugins list-remote | awk '{print $2}'| grep "-"`
   fi
-  for plugin in ${GRAFANA_PLUGINS}; 
+  for plugin in ${GRAFANA_PLUGINS};
   do
     if [ ! -d ${GF_PATHS_PLUGINS}/$plugin ]
     then
@@ -27,7 +27,7 @@ then
 fi
 
 # Start grafana with gosu
-exec gosu grafana /usr/share/grafana/bin/grafana-server  \
+exec su-exec grafana /usr/share/grafana/bin/grafana-server  \
   --homepath=/usr/share/grafana             \
   --config=/etc/grafana/grafana.ini         \
   cfg:default.paths.data="$GF_PATHS_DATA"   \
@@ -56,7 +56,7 @@ INFLUXDB_DATA_SOURCE_STATUS=`curl -s -L -i \
 curl -s -L -i \
  -H "Accept: application/json" \
  -H "Content-Type: application/json" \
- -X GET http://${GRAFANA_USER}:${GRAFANA_PASSWORD}@${GRAFANA_URL}:${GRAFANA_PORT}/api/datasources/name/${INFLUXDB_DATA_SOURCE_WEB} >>$GF_PATHS_LOGS/grafana.log 2>>$GF_PATHS_LOGS/grafana.log 
+ -X GET http://${GRAFANA_USER}:${GRAFANA_PASSWORD}@${GRAFANA_URL}:${GRAFANA_PORT}/api/datasources/name/${INFLUXDB_DATA_SOURCE_WEB} >>$GF_PATHS_LOGS/grafana.log 2>>$GF_PATHS_LOGS/grafana.log
 echo "http://${GRAFANA_USER}:${GRAFANA_PASSWORD}@${GRAFANA_URL}:${GRAFANA_PORT}/api/datasources/name/${INFLUXDB_DATA_SOURCE_WEB}" >> $GF_PATHS_LOGS/grafana.log
 echo "INFLUXDB_DATA_SOURCE_STATUS: "$INFLUXDB_DATA_SOURCE_STATUS >> $GF_PATHS_LOGS/grafana.log
 echo "GRAFANA_URL: "$GRAFANA_URL >> $GF_PATHS_LOGS/grafana.log
@@ -67,7 +67,7 @@ echo "GRAFANA_PASSWORD: "$GRAFANA_PASSWORD >> $GF_PATHS_LOGS/grafana.log
 # Check if $INFLUXDB_DATA_SOURCE exists
 if [ ${INFLUXDB_DATA_SOURCE_STATUS} != 200 ]
 then
-  # If not exists, create one 
+  # If not exists, create one
   echo "Data Source: '"${INFLUXDB_DATA_SOURCE}"' not found in Grafana configuration"
   echo "Creating Data Source: '"$INFLUXDB_DATA_SOURCE"'"
   curl -L -i \

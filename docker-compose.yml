@@ -27,13 +27,13 @@ services:
         restart: always
         env_file:
             - .env
-        networks: 
+        networks:
             - backend
-            
+
     grafana:
         build: ./grafana
         container_name: grafana
-        ports: 
+        ports:
             - ${GRAFANA_PORT}:${GRAFANA_PORT}
         links:
             - influxdb

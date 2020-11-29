@@ -1,4 +1,6 @@
-FROM influxdb:latest
+# prepare for v2.0 update
+FROM influxdb:1.8
+
 
 LABEL author="Alexis Le Provost <alexis.leprovost@outlook.com>"
 LABEL version="1.0.0"
