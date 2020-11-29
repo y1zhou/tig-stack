@@ -792,219 +792,6 @@
       "valueName": "current"
     },
     {
-      "columns": [],
-      "datasource": "Docker InfluxDB",
-      "fontSize": "100%",
-      "gridPos": {
-        "h": 8,
-        "w": 24,
-        "x": 0,
-        "y": 8
-      },
-      "id": 42,
-      "links": [],
-      "pageSize": null,
-      "scroll": true,
-      "showHeader": true,
-      "sort": {
-        "col": null,
-        "desc": false
-      },
-      "styles": [
-        {
-          "alias": "Time",
-          "dateFormat": "YYYY-MM-DD HH:mm:ss",
-          "pattern": "Time",
-          "type": "hidden"
-        },
-        {
-          "alias": "",
-          "colorMode": null,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "decimals": 2,
-          "pattern": "CPU",
-          "thresholds": [],
-          "type": "number",
-          "unit": "percent"
-        },
-        {
-          "alias": "",
-          "colorMode": null,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "dateFormat": "YYYY-MM-DD HH:mm:ss",
-          "decimals": 2,
-          "mappingType": 1,
-          "pattern": "RAM",
-          "thresholds": [],
-          "type": "number",
-          "unit": "percent"
-        },
-        {
-          "alias": "",
-          "colorMode": null,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "dateFormat": "HH:mm:ss",
-          "decimals": 2,
-          "mappingType": 1,
-          "pattern": "Flag",
-          "thresholds": [],
-          "type": "string",
-          "unit": "short",
-          "valueMaps": []
-        }
-      ],
-      "targets": [
-        {
-          "groupBy": [
-            {
-              "params": [
-                "1m"
-              ],
-              "type": "time"
-            },
-            {
-              "params": [
-                "command"
-              ],
-              "type": "tag"
-            },
-            {
-              "params": [
-                "user"
-              ],
-              "type": "tag"
-            },
-            {
-              "params": [
-                "none"
-              ],
-              "type": "fill"
-            }
-          ],
-          "limit": "1",
-          "measurement": "proc_stat",
-          "orderByTime": "DESC",
-          "policy": "default",
-          "query": "SELECT last(\"cpu_percent\") AS \"CPU\", last(\"mem_percent\") AS \"RAM\", last(\"pid\") AS \"PID\", last(\"uptime\") AS \"uptime\" FROM \"proc_stat\" WHERE $timeFilter GROUP BY time($__interval), \"command\" fill(none) ORDER BY time DESC LIMIT 1",
-          "rawQuery": false,
-          "refId": "A",
-          "resultFormat": "table",
-          "select": [
-            [
-              {
-                "params": [
-                  "pid"
-                ],
-                "type": "field"
-              },
-              {
-                "params": [],
-                "type": "last"
-              },
-              {
-                "params": [
-                  "PID"
-                ],
-                "type": "alias"
-              }
-            ],
-            [
-              {
-                "params": [
-                  "cpu_percent"
-                ],
-                "type": "field"
-              },
-              {
-                "params": [],
-                "type": "last"
-              },
-              {
-                "params": [
-                  "CPU"
-                ],
-                "type": "alias"
-              }
-            ],
-            [
-              {
-                "params": [
-                  "mem_percent"
-                ],
-                "type": "field"
-              },
-              {
-                "params": [],
-                "type": "last"
-              },
-              {
-                "params": [
-                  "RAM"
-                ],
-                "type": "alias"
-              }
-            ],
-            [
-              {
-                "params": [
-                  "stat"
-                ],
-                "type": "field"
-              },
-              {
-                "params": [],
-                "type": "last"
-              },
-              {
-                "params": [
-                  "Flag"
-                ],
-                "type": "alias"
-              }
-            ],
-            [
-              {
-                "params": [
-                  "uptime"
-                ],
-                "type": "field"
-              },
-              {
-                "params": [],
-                "type": "last"
-              },
-              {
-                "params": [
-                  "Uptime"
-                ],
-                "type": "alias"
-              }
-            ]
-          ],
-          "slimit": "",
-          "tags": [],
-          "tz": ""
-        }
-      ],
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "Processes",
-      "transform": "table",
-      "type": "table"
-    },
-    {
       "aliasColors": {},
       "bars": false,
       "dashLength": 10,
@@ -1240,49 +1027,6 @@
             ]
           ],
           "tags": []
-        },
-        {
-          "alias": "$tag_model",
-          "groupBy": [
-            {
-              "params": [
-                "$__interval"
-              ],
-              "type": "time"
-            },
-            {
-              "params": [
-                "model"
-              ],
-              "type": "tag"
-            },
-            {
-              "params": [
-                "linear"
-              ],
-              "type": "fill"
-            }
-          ],
-          "measurement": "hddtemp",
-          "orderByTime": "ASC",
-          "policy": "default",
-          "refId": "B",
-          "resultFormat": "time_series",
-          "select": [
-            [
-              {
-                "params": [
-                  "temperature"
-                ],
-                "type": "field"
-              },
-              {
-                "params": [],
-                "type": "mean"
-              }
-            ]
-          ],
-          "tags": []
         }
       ],
       "thresholds": [],
@@ -1390,24 +1134,6 @@
           "refId": "A",
           "resultFormat": "time_series",
           "select": [
-            [
-              {
-                "params": [
-                  "usage_guest"
-                ],
-                "type": "field"
-              },
-              {
-                "params": [],
-                "type": "mean"
-              },
-              {
-                "params": [
-                  "guest"
-                ],
-                "type": "alias"
-              }
-            ],
             [
               {
                 "params": [
@@ -1832,17 +1558,17 @@
       "steppedLine": false,
       "targets": [
         {
-          "alias": "$tag_user:$tag_command",
+          "alias": "$tag_user:$tag_process_name",
           "groupBy": [
             {
               "params": [
-                "$__interval"
+                "$5m"
               ],
               "type": "time"
             },
             {
               "params": [
-                "command"
+                "process_name"
               ],
               "type": "tag"
             },
@@ -1854,23 +1580,21 @@
             },
             {
               "params": [
-                "null"
+                "none"
               ],
               "type": "fill"
             }
           ],
-          "measurement": "proc_stat",
+          "measurement": "procstat",
           "orderByTime": "ASC",
           "policy": "default",
-          "query": "SELECT mean(\"cpu_percent\") FROM \"proc_stat\" WHERE $timeFilter GROUP BY time($__interval), \"command\", \"user\" fill(null)",
-          "rawQuery": false,
           "refId": "A",
           "resultFormat": "time_series",
           "select": [
             [
               {
                 "params": [
-                  "cpu_percent"
+                  "cpu_usage"
                 ],
                 "type": "field"
               },
@@ -2440,17 +2164,17 @@
       "steppedLine": false,
       "targets": [
         {
-          "alias": "$tag_user:$tag_command",
+          "alias": "$tag_user:$tag_process_name",
           "groupBy": [
             {
               "params": [
-                "$__interval"
+                "5m"
               ],
               "type": "time"
             },
             {
               "params": [
-                "command"
+                "process_name"
               ],
               "type": "tag"
             },
@@ -2462,12 +2186,12 @@
             },
             {
               "params": [
-                "null"
+                "none"
               ],
               "type": "fill"
             }
           ],
-          "measurement": "proc_stat",
+          "measurement": "procstat",
           "orderByTime": "ASC",
           "policy": "default",
           "refId": "A",
@@ -2476,7 +2200,7 @@
             [
               {
                 "params": [
-                  "mem_percent"
+                  "memory_usage"
                 ],
                 "type": "field"
               },
@@ -2531,7 +2255,7 @@
       }
     }
   ],
-  "refresh": "5s",
+  "refresh": "30s",
   "schemaVersion": 18,
   "style": "dark",
   "tags": [
