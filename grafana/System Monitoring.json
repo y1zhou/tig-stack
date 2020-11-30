@@ -27,6 +27,12 @@
         "#d44a3a"
       ],
       "datasource": "Docker InfluxDB",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
       "format": "none",
       "gauge": {
         "maxValue": 100,
@@ -36,7 +42,7 @@
         "thresholdMarkers": true
       },
       "gridPos": {
-        "h": 2,
+        "h": 3,
         "w": 3,
         "x": 0,
         "y": 0
@@ -140,6 +146,12 @@
       ],
       "datasource": "Docker InfluxDB",
       "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
       "format": "dtdurations",
       "gauge": {
         "maxValue": 100,
@@ -149,7 +161,7 @@
         "thresholdMarkers": true
       },
       "gridPos": {
-        "h": 2,
+        "h": 3,
         "w": 21,
         "x": 3,
         "y": 0
@@ -252,6 +264,12 @@
         "#d44a3a"
       ],
       "datasource": "Docker InfluxDB",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
       "format": "decbits",
       "gauge": {
         "maxValue": 100,
@@ -264,7 +282,7 @@
         "h": 3,
         "w": 3,
         "x": 0,
-        "y": 2
+        "y": 3
       },
       "id": 38,
       "interval": null,
@@ -365,6 +383,12 @@
         "#FF9830"
       ],
       "datasource": "Docker InfluxDB",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
       "format": "none",
       "gauge": {
         "maxValue": 100,
@@ -377,7 +401,7 @@
         "h": 6,
         "w": 7,
         "x": 3,
-        "y": 2
+        "y": 3
       },
       "id": 8,
       "interval": null,
@@ -471,6 +495,12 @@
         "#d44a3a"
       ],
       "datasource": "Docker InfluxDB",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
       "format": "percent",
       "gauge": {
         "maxValue": 100,
@@ -483,7 +513,7 @@
         "h": 6,
         "w": 7,
         "x": 10,
-        "y": 2
+        "y": 3
       },
       "id": 14,
       "interval": null,
@@ -583,6 +613,12 @@
         "#d44a3a"
       ],
       "datasource": "Docker InfluxDB",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
       "format": "percent",
       "gauge": {
         "maxValue": 100,
@@ -595,7 +631,7 @@
         "h": 6,
         "w": 7,
         "x": 17,
-        "y": 2
+        "y": 3
       },
       "id": 12,
       "interval": null,
@@ -689,6 +725,12 @@
         "#d44a3a"
       ],
       "datasource": "Docker InfluxDB",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
       "format": "decbits",
       "gauge": {
         "maxValue": 100,
@@ -701,7 +743,7 @@
         "h": 3,
         "w": 3,
         "x": 0,
-        "y": 5
+        "y": 6
       },
       "id": 40,
       "interval": null,
@@ -797,13 +839,21 @@
       "dashLength": 10,
       "dashes": false,
       "datasource": "Docker InfluxDB",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
       "fill": 1,
+      "fillGradient": 0,
       "gridPos": {
         "h": 7,
         "w": 15,
         "x": 0,
-        "y": 16
+        "y": 9
       },
+      "hiddenSeries": false,
       "id": 32,
       "legend": {
         "avg": false,
@@ -818,12 +868,17 @@
       "linewidth": 1,
       "links": [],
       "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
       "paceLength": 10,
       "percentage": false,
+      "pluginVersion": "7.3.4",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
       "seriesOverrides": [],
+      "spaceLength": 10,
       "stack": false,
       "steppedLine": false,
       "targets": [
@@ -954,13 +1009,21 @@
       "dashLength": 10,
       "dashes": false,
       "datasource": "Docker InfluxDB",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
       "fill": 1,
+      "fillGradient": 0,
       "gridPos": {
         "h": 10,
         "w": 9,
         "x": 15,
-        "y": 16
+        "y": 9
       },
+      "hiddenSeries": false,
       "id": 16,
       "legend": {
         "alignAsTable": false,
@@ -976,12 +1039,17 @@
       "linewidth": 1,
       "links": [],
       "nullPointMode": "connected",
+      "options": {
+        "alertThreshold": true
+      },
       "paceLength": 10,
       "percentage": false,
+      "pluginVersion": "7.3.4",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
       "seriesOverrides": [],
+      "spaceLength": 10,
       "stack": false,
       "steppedLine": false,
       "targets": [
@@ -1076,13 +1144,21 @@
       "dashLength": 10,
       "dashes": false,
       "datasource": "Docker InfluxDB",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
       "fill": 2,
+      "fillGradient": 0,
       "gridPos": {
         "h": 7,
         "w": 15,
         "x": 0,
-        "y": 23
+        "y": 16
       },
+      "hiddenSeries": false,
       "hideTimeOverride": false,
       "id": 2,
       "interval": "",
@@ -1103,12 +1179,17 @@
       "linewidth": 1,
       "links": [],
       "nullPointMode": "connected",
+      "options": {
+        "alertThreshold": true
+      },
       "paceLength": 10,
       "percentage": false,
+      "pluginVersion": "7.3.4",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
       "seriesOverrides": [],
+      "spaceLength": 10,
       "stack": true,
       "steppedLine": false,
       "targets": [
@@ -1240,13 +1321,21 @@
       "dashLength": 10,
       "dashes": false,
       "datasource": "Docker InfluxDB",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
       "fill": 1,
+      "fillGradient": 0,
       "gridPos": {
         "h": 12,
         "w": 9,
         "x": 15,
-        "y": 26
+        "y": 19
       },
+      "hiddenSeries": false,
       "id": 20,
       "legend": {
         "alignAsTable": true,
@@ -1263,12 +1352,17 @@
       "linewidth": 1,
       "links": [],
       "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
       "paceLength": 10,
       "percentage": false,
+      "pluginVersion": "7.3.4",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
       "seriesOverrides": [],
+      "spaceLength": 10,
       "stack": false,
       "steppedLine": true,
       "targets": [
@@ -1400,13 +1494,21 @@
       "dashLength": 10,
       "dashes": false,
       "datasource": "Docker InfluxDB",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
       "fill": 1,
+      "fillGradient": 0,
       "gridPos": {
         "h": 7,
         "w": 15,
         "x": 0,
-        "y": 30
+        "y": 23
       },
+      "hiddenSeries": false,
       "id": 28,
       "legend": {
         "avg": false,
@@ -1421,12 +1523,17 @@
       "linewidth": 1,
       "links": [],
       "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
       "paceLength": 10,
       "percentage": false,
+      "pluginVersion": "7.3.4",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
       "seriesOverrides": [],
+      "spaceLength": 10,
       "stack": false,
       "steppedLine": false,
       "targets": [
@@ -1527,13 +1634,21 @@
       "dashLength": 10,
       "dashes": false,
       "datasource": "Docker InfluxDB",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
       "fill": 1,
+      "fillGradient": 0,
       "gridPos": {
         "h": 7,
         "w": 15,
         "x": 0,
-        "y": 37
+        "y": 30
       },
+      "hiddenSeries": false,
       "id": 44,
       "legend": {
         "avg": false,
@@ -1548,12 +1663,17 @@
       "linewidth": 1,
       "links": [],
       "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
       "paceLength": 10,
       "percentage": false,
+      "pluginVersion": "7.3.4",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
       "seriesOverrides": [],
+      "spaceLength": 10,
       "stack": true,
       "steppedLine": false,
       "targets": [
@@ -1654,13 +1774,21 @@
       "dashLength": 10,
       "dashes": false,
       "datasource": "Docker InfluxDB",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
       "fill": 1,
+      "fillGradient": 0,
       "gridPos": {
         "h": 10,
         "w": 9,
         "x": 15,
-        "y": 38
+        "y": 31
       },
+      "hiddenSeries": false,
       "id": 34,
       "legend": {
         "alignAsTable": true,
@@ -1677,12 +1805,17 @@
       "linewidth": 1,
       "links": [],
       "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
       "paceLength": 10,
       "percentage": false,
+      "pluginVersion": "7.3.4",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
       "seriesOverrides": [],
+      "spaceLength": 10,
       "stack": true,
       "steppedLine": false,
       "targets": [
@@ -1811,13 +1944,21 @@
       "dashLength": 10,
       "dashes": false,
       "datasource": "Docker InfluxDB",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
       "fill": 1,
+      "fillGradient": 0,
       "gridPos": {
         "h": 7,
         "w": 15,
         "x": 0,
-        "y": 44
+        "y": 37
       },
+      "hiddenSeries": false,
       "id": 10,
       "legend": {
         "avg": false,
@@ -1832,8 +1973,12 @@
       "linewidth": 1,
       "links": [],
       "nullPointMode": "connected",
+      "options": {
+        "alertThreshold": true
+      },
       "paceLength": 10,
       "percentage": false,
+      "pluginVersion": "7.3.4",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -1842,6 +1987,7 @@
           "alias": ""
         }
       ],
+      "spaceLength": 10,
       "stack": true,
       "steppedLine": false,
       "targets": [
@@ -1992,13 +2138,21 @@
       "dashLength": 10,
       "dashes": false,
       "datasource": "Docker InfluxDB",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
       "fill": 1,
+      "fillGradient": 0,
       "gridPos": {
         "h": 10,
         "w": 9,
         "x": 15,
-        "y": 48
+        "y": 41
       },
+      "hiddenSeries": false,
       "id": 30,
       "legend": {
         "alignAsTable": true,
@@ -2015,12 +2169,17 @@
       "linewidth": 1,
       "links": [],
       "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
       "paceLength": 10,
       "percentage": false,
+      "pluginVersion": "7.3.4",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
       "seriesOverrides": [],
+      "spaceLength": 10,
       "stack": true,
       "steppedLine": false,
       "targets": [
@@ -2133,13 +2292,21 @@
       "dashLength": 10,
       "dashes": false,
       "datasource": "Docker InfluxDB",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
       "fill": 1,
+      "fillGradient": 0,
       "gridPos": {
         "h": 7,
         "w": 15,
         "x": 0,
-        "y": 51
+        "y": 44
       },
+      "hiddenSeries": false,
       "id": 46,
       "legend": {
         "avg": false,
@@ -2154,12 +2321,17 @@
       "linewidth": 1,
       "links": [],
       "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
       "paceLength": 10,
       "percentage": false,
+      "pluginVersion": "7.3.4",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
       "seriesOverrides": [],
+      "spaceLength": 10,
       "stack": true,
       "steppedLine": false,
       "targets": [
@@ -2256,7 +2428,7 @@
     }
   ],
   "refresh": "30s",
-  "schemaVersion": 18,
+  "schemaVersion": 26,
   "style": "dark",
   "tags": [
     "docker",
@@ -2298,5 +2470,5 @@
   "timezone": "",
   "title": "System Monitoring",
   "uid": "NceaJU3ik",
-  "version": 1
+  "version": 4
 }
