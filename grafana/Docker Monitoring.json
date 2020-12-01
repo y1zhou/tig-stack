@@ -15,7 +15,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "iteration": 1606783021423,
+  "iteration": 1606792099826,
   "links": [],
   "panels": [
     {
@@ -47,7 +47,7 @@
               }
             ]
           },
-          "unit": "s"
+          "unit": "dtdhms"
         },
         "overrides": []
       },
@@ -1280,5 +1280,5 @@
   "timezone": "browser",
   "title": "Docker Monitoring",
   "uid": "1xMJOpRgk",
-  "version": 1
+  "version": 2
 }

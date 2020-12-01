@@ -47,7 +47,7 @@
               }
             ]
           },
-          "unit": "dtdurations"
+          "unit": "dtdhms"
         },
         "overrides": []
       },
@@ -1932,5 +1932,5 @@
   "timezone": "",
   "title": "System Monitoring",
   "uid": "NceaJU3ik",
-  "version": 5
+  "version": 6
 }
