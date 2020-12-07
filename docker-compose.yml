@@ -8,7 +8,7 @@ services:
             - ${INFLUXDB_PORT}:${INFLUXDB_PORT}
         volumes:
             - /var/lib/influxdb:/var/lib/influxdb
-        restart: always
+        restart: unless-stopped
         env_file:
             - .env
         networks:
@@ -24,7 +24,7 @@ services:
             - /var/run/docker.sock:/var/run/docker.sock
             - /proc:/hostfs/proc
         privileged: true
-        restart: always
+        restart: unless-stopped
         env_file:
             - .env
         networks:
@@ -41,7 +41,7 @@ services:
             - /var/lib/grafana
             - /var/log/grafana
             - /var/lib/grafana/plugins
-        restart: always
+        restart: unless-stopped
         env_file:
             - .env
         networks:

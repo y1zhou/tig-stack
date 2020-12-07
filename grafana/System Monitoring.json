@@ -636,7 +636,17 @@
           "tags": []
         }
       ],
-      "thresholds": [],
+      "thresholds": [
+        {
+          "$$hashKey": "object:166",
+          "colorMode": "warning",
+          "fill": true,
+          "line": true,
+          "op": "gt",
+          "value": 1,
+          "yaxis": "left"
+        }
+      ],
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
@@ -657,12 +667,12 @@
       "yaxes": [
         {
           "$$hashKey": "object:1062",
-          "format": "short",
+          "format": "none",
           "label": null,
           "logBase": 1,
           "max": null,
           "min": null,
-          "show": false
+          "show": true
         },
         {
           "$$hashKey": "object:1063",
@@ -671,7 +681,7 @@
           "logBase": 1,
           "max": null,
           "min": null,
-          "show": true
+          "show": false
         }
       ],
       "yaxis": {
@@ -1932,5 +1942,5 @@
   "timezone": "",
   "title": "System Monitoring",
   "uid": "NceaJU3ik",
-  "version": 6
+  "version": 7
 }
